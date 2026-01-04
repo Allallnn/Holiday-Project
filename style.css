@@ -13,6 +13,7 @@ body {
     background: #111111;
     color: #ffffff;
     font-family: "Manrope", sans-serif;
+    overflow-x: hidden;
 }
 
 .Section-1,
@@ -41,8 +42,11 @@ hr {
 /* ================= NAV ================= */
 
 .navbar {
-    background: #111111 !important;
-    padding: 2rem 6rem;
+    background: #000000;
+    padding: 1.5rem 6rem;
+    border-bottom: 1px solid #1a1a1a;
+    position: relative;
+    z-index: 1000;
 }
 
 .navbar .container-fluid {
@@ -53,26 +57,19 @@ hr {
     font-family: "Bebas Neue", sans-serif;
     font-size: 1.5rem;
     letter-spacing: 2px;
-    color: #ffffff !important;
-}
-
-.navbar-nav {
-    margin-left: auto;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
 }
 
 .nav-link {
-    color: #ffffff !important;
+    color: #ffffff;
     margin-left: 2rem;
-    font-size: 0.85rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+    font-size: 0.9rem;
 }
 
-.nav-link:hover {
-    color: #D3E97A !important;
-}
-
-/* bootstrap cleanup */
+/* Bootstrap fixes */
 .navbar-toggler {
     border: none;
 }
@@ -86,7 +83,22 @@ hr {
 }
 
 .navbar-collapse {
-    background: #111111;
+    background: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+/* Mobile menu */
+@media (max-width: 991px) {
+    .nav-link {
+        margin-left: 0;
+        padding: 0.75rem 0;
+    }
+
+    .navbar-collapse {
+        padding-top: 1rem;
+        border-top: 1px solid #1a1a1a;
+    }
 }
 
 /* ================= SECTION 1 ================= */
@@ -100,17 +112,12 @@ hr {
     min-height: 90vh;
 }
 
-.Section-1 > div:first-child {
-    transform: translateY(-20px);
-}
-
 .Section-1 h1 {
     font-family: "Bebas Neue", sans-serif;
     font-size: 4.5rem;
     line-height: 1;
     letter-spacing: 1px;
     margin-bottom: 1.5rem;
-    color: #ffffff;
 }
 
 .Section-1 p {
@@ -118,8 +125,6 @@ hr {
     margin-bottom: 2rem;
     color: #bdbdbd;
 }
-
-/* buttons */
 
 .btn-div {
     display: flex;
@@ -139,8 +144,6 @@ hr {
 
 #button-1 {
     padding: 0 2rem;
-    min-width: 160px;
-    justify-content: center;
     background: #D3E97A;
     color: #000000;
     font-weight: 600;
@@ -155,7 +158,6 @@ hr {
 #button-2,
 #button-3 {
     width: 48px;
-    height: 48px;
     justify-content: center;
     background: #1A1A1A;
 }
@@ -166,8 +168,7 @@ hr {
     height: 20px;
 }
 
-/* hero image card */
-
+/* HERO IMAGE FRAME */
 .Section-1 > div:last-child {
     background: #e6e6e6;
     padding: 1.2rem;
@@ -175,9 +176,9 @@ hr {
 }
 
 .Section-1 img {
-    background: #cfcfcf;
-    padding: 2rem;
     border-radius: 20px;
+    background: #d9d9d9;
+    padding: 2rem;
 }
 
 /* ================= SECTION 2 & 3 ================= */
@@ -220,8 +221,7 @@ hr {
     color: #bdbdbd;
 }
 
-/* project info rows */
-
+/* PROJECT INFO ROWS */
 .Section-2 > div:nth-child(2) > div,
 .Section-3 > div:nth-child(2) > div {
     display: flex;
@@ -229,8 +229,6 @@ hr {
     padding: 0.9rem 0;
     border-bottom: 1px solid #1a1a1a;
 }
-
-/* project links */
 
 .Section-2 h4,
 .Section-3 h4 {
@@ -240,11 +238,6 @@ hr {
     color: #D3E97A;
     cursor: pointer;
     text-transform: uppercase;
-}
-
-.Section-2 h4:hover,
-.Section-3 h4:hover {
-    text-decoration: underline;
 }
 
 .Section-2 h4 img,
@@ -295,12 +288,6 @@ footer textarea {
     color: #ffffff;
 }
 
-footer .form-control:focus,
-footer textarea:focus {
-    box-shadow: none;
-    border-color: #D3E97A;
-}
-
 footer button {
     margin-top: 1rem;
     padding: 0.8rem 2rem;
@@ -310,4 +297,269 @@ footer button {
     color: #000000;
     font-weight: 600;
     cursor: pointer;
+}
+
+/* ================= MOBILE RESPONSIVE STYLES ================= */
+
+/* Tablet and smaller screens */
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 1.5rem 3rem;
+    }
+    
+    .Section-1,
+    .Section-2,
+    .Section-3,
+    .Section-4,
+    footer {
+        padding: 4rem 3rem;
+    }
+    
+    .Section-1 h1 {
+        font-size: 3.5rem;
+    }
+    
+    .Section-2 h3,
+    .Section-3 h3 {
+        font-size: 2rem;
+    }
+}
+
+/* Tablet screens */
+@media (max-width: 768px) {
+    .Section-1 {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        min-height: auto;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    
+    .Section-1 > div:last-child {
+        order: -1;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .Section-1 h1 {
+        font-size: 3rem;
+        text-align: center;
+    }
+    
+    .Section-1 p {
+        max-width: 100%;
+        text-align: center;
+    }
+    
+    .btn-div {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .Section-2,
+    .Section-3 {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .Section-2 img,
+    .Section-3 img {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    
+    .Section-2 h3,
+    .Section-3 h3 {
+        text-align: center;
+    }
+    
+    .Section-2 p,
+    .Section-3 p {
+        max-width: 100%;
+        text-align: center;
+    }
+    
+    footer {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    footer h1 {
+        font-size: 3rem;
+        text-align: center;
+    }
+    
+    footer > div:first-child p {
+        text-align: center;
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 576px) {
+    .navbar {
+        padding: 1rem 1.5rem;
+    }
+    
+    .navbar-brand {
+        font-size: 1.3rem;
+    }
+    
+    .Section-1,
+    .Section-2,
+    .Section-3,
+    .Section-4,
+    footer {
+        padding: 2rem 1.5rem;
+    }
+    
+    .Section-1 h1 {
+        font-size: 2.5rem;
+    }
+    
+    .Section-1 > div:last-child {
+        padding: 1rem;
+        border-radius: 20px;
+    }
+    
+    .Section-1 img {
+        padding: 1.5rem;
+        border-radius: 16px;
+    }
+    
+    .Section-2 h3,
+    .Section-3 h3 {
+        font-size: 1.8rem;
+    }
+    
+    .Section-2 img,
+    .Section-3 img {
+        padding: 1.5rem;
+        border-radius: 12px;
+    }
+    
+    footer h1 {
+        font-size: 2.5rem;
+    }
+    
+    footer button {
+        width: 100%;
+    }
+    
+    /* Adjust project info for mobile */
+    .Section-2 > div:nth-child(2) > div,
+    .Section-3 > div:nth-child(2) > div {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.3rem;
+        padding: 0.7rem 0;
+    }
+    
+    .Section-2 h4,
+    .Section-3 h4 {
+        text-align: center;
+        margin-top: 1.5rem;
+    }
+    
+    /* Fix form inputs on mobile */
+    .form-control {
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+    
+    .form-label {
+        margin-bottom: 0.5rem;
+    }
+    
+    /* Stack buttons vertically on very small screens */
+    @media (max-width: 400px) {
+        .btn-div {
+            flex-direction: column;
+            align-items: stretch;
+        }
+        
+        #button-1,
+        #button-2,
+        #button-3 {
+            width: 100%;
+            justify-content: center;
+        }
+        
+        #button-1 {
+            margin-bottom: 0.5rem;
+        }
+    }
+}
+
+/* Small mobile screens */
+@media (max-width: 375px) {
+    .Section-1 h1 {
+        font-size: 2.2rem;
+    }
+    
+    .Section-2 h3,
+    .Section-3 h3 {
+        font-size: 1.6rem;
+    }
+    
+    footer h1 {
+        font-size: 2rem;
+    }
+    
+    #button-1 {
+        padding: 0 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Fix for the broken HTML tag */
+.navbar-collapse {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Ensure images don't overflow */
+.Section-1 > div:last-child,
+.Section-2 > div:first-child,
+.Section-3 > div:first-child {
+    overflow: hidden;
+}
+
+/* Make sure text is readable on mobile */
+p, h5, .form-label {
+    line-height: 1.6;
+}
+
+/* Improve touch targets for mobile */
+button, 
+.nav-link,
+.Section-2 h4,
+.Section-3 h4 {
+    min-height: 44px; /* Minimum touch target size */
+    display: inline-flex;
+    align-items: center;
+}
+
+/* Fix for form spacing */
+.mb-3 {
+    margin-bottom: 1rem !important;
+}
+
+/* Fix for Section-4 spacing */
+.Section-4 {
+    text-align: center;
+    padding: 4rem 1.5rem;
+}
+
+.Section-4 h2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.Section-4 p {
+    color: #bdbdbd;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
 }
