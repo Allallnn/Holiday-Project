@@ -1,565 +1,358 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;800&display=swap');
+/* =========================
+   FONT IMPORTS
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@300;400;500;600&display=swap');
 
-/* ================= RESET ================= */
-
+/* =========================
+   RESET
+========================= */
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
 body {
-    background: #111111;
-    color: #ffffff;
-    font-family: "Manrope", sans-serif;
-    overflow-x: hidden;
-}
-
-.Section-1,
-.Section-2,
-.Section-3,
-.Section-4,
-footer {
-    background-color: #111111;
+  margin: 0;
+  background-color: #000000;
+  color: #FFFFFF;
+  font-family: 'Manrope', sans-serif;
+  line-height: 1.6;
 }
 
 img {
-    max-width: 100%;
-    display: block;
+  max-width: 100%;
+  display: block;
 }
 
-/* ================= HR ================= */
-
-hr {
-    border: none;
-    height: 1px;
-    background-color: #1a1a1a;
-    opacity: 1;
-    margin: 0;
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-/* ================= NAV ================= */
 
-.navbar {
-    background: #000000;
-    padding: 1.5rem 6rem;
-    border-bottom: 1px solid #1a1a1a;
-    position: relative;
-    z-index: 1000;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 96px 24px;
 }
 
-.navbar .container-fluid {
-    padding: 0;
+.section {
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
-.navbar-brand {
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 1.5rem;
-    letter-spacing: 2px;
-    color: #ffffff;
-    margin: 0;
-    padding: 0;
-    line-height: 1;
+h1, h2, h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  margin: 0;
+  letter-spacing: 1px;
+  color: #FFFFFF;
 }
 
-.nav-link {
-    color: #ffffff;
-    margin-left: 2rem;
-    font-size: 0.9rem;
+h1 {
+  font-size: clamp(48px, 7vw, 72px);
 }
 
-/* Bootstrap fixes */
-.navbar-toggler {
-    border: none;
+h2 {
+  font-size: clamp(40px, 6vw, 56px);
 }
 
-.navbar-toggler:focus {
-    box-shadow: none;
+h3 {
+  font-size: 22px;
 }
 
-.navbar-toggler-icon {
-    filter: invert(1);
+p {
+  margin: 0;
+  color: #C7C7C7;
+  font-size: 15px;
+  max-width: 520px;
 }
 
-.navbar-collapse {
-    background: #000000;
-    margin: 0;
-    padding: 0;
+
+.nav {
+  position: sticky;
+  top: 0;
+  background: #000000;
 }
 
-/* Mobile menu */
-@media (max-width: 991px) {
-    .nav-link {
-        margin-left: 0;
-        padding: 0.75rem 0;
-    }
-
-    .navbar-collapse {
-        padding-top: 1rem;
-        border-top: 1px solid #1a1a1a;
-    }
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* ================= SECTION 1 ================= */
-
-.Section-1 {
-    display: grid;
-    grid-template-columns: 1.1fr 1fr;
-    gap: 4rem;
-    padding: 6rem;
-    align-items: center;
-    min-height: 90vh;
+.nav-links {
+  display: flex;
+  gap: 32px;
+  font-size: 14px;
+  color: #C7C7C7;
 }
 
-.Section-1 h1 {
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 4.5rem;
-    line-height: 1;
-    letter-spacing: 1px;
-    margin-bottom: 1.5rem;
+
+.btn {
+  padding: 14px 22px;
+  border-radius: 999px;
+  font-family: 'Manrope', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
 }
 
-.Section-1 p {
-    max-width: 420px;
-    margin-bottom: 2rem;
-    color: #bdbdbd;
+.btn-primary {
+  background-color: #D3E97A;
+  color: #000000;
 }
 
-.btn-div {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 80px;
+  align-items: center;
 }
 
-.Section-1 button {
-    height: 48px;
-    border-radius: 30px;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
-#button-1 {
-    padding: 0 2rem;
-    background: #D3E97A;
-    color: #000000;
-    font-weight: 600;
-    text-transform: uppercase;
+.hero-actions {
+  display: flex;
+  gap: 16px;
 }
 
-#button-1 img {
-    width: 14px;
-    height: 14px;
+.hero-image {
+  background-color: #D9D9D9;
+  border-radius: 16px;
+  overflow: hidden;
 }
 
-#button-2,
-#button-3 {
-    width: 48px;
-    justify-content: center;
-    background: #1A1A1A;
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 140px;
 }
 
-#button-2 img,
-#button-3 img {
-    width: 20px;
-    height: 20px;
+.project {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
 }
 
-/* HERO IMAGE FRAME */
-.Section-1 > div:last-child {
-    background: #e6e6e6;
-    padding: 1.2rem;
-    border-radius: 28px;
+.project:nth-child(even) {
+  direction: rtl;
 }
 
-.Section-1 img {
-    border-radius: 20px;
-    background: #d9d9d9;
-    padding: 2rem;
+.project:nth-child(even) * {
+  direction: ltr;
 }
 
-/* ================= SECTION 2 & 3 ================= */
-
-.Section-2,
-.Section-3 {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 5rem;
-    padding: 6rem;
-    align-items: center;
+.project-media {
+  background-color: #111111;
+  padding: 24px;
+  border-radius: 16px;
 }
 
-.Section-2 img,
-.Section-3 img {
-    background: #111111;
-    padding: 2rem;
-    border-radius: 16px;
+.project-details {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
-.Section-2 h3,
-.Section-3 h3 {
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 2.3rem;
-    letter-spacing: 1px;
-    margin-bottom: 1rem;
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
 }
 
-.Section-2 p,
-.Section-3 p {
-    max-width: 560px;
-    margin-bottom: 2.5rem;
-    color: #bdbdbd;
+.about-text {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
-.Section-2 h5,
-.Section-3 h5 {
-    font-size: 0.75rem;
-    letter-spacing: 1px;
-    color: #bdbdbd;
+.about-image {
+  background-color: #D9D9D9;
+  border-radius: 16px;
+  overflow: hidden;
 }
 
-/* PROJECT INFO ROWS */
-.Section-2 > div:nth-child(2) > div,
-.Section-3 > div:nth-child(2) > div {
-    display: flex;
-    justify-content: space-between;
-    padding: 0.9rem 0;
-    border-bottom: 1px solid #1a1a1a;
+.capabilities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 24px;
 }
 
-.Section-2 h4,
-.Section-3 h4 {
-    margin-top: 1.8rem;
-    font-size: 0.75rem;
-    letter-spacing: 1px;
-    color: #D3E97A;
-    cursor: pointer;
-    text-transform: uppercase;
+.capability {
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.15);
+  font-size: 13px;
 }
 
-.Section-2 h4 img,
-.Section-3 h4 img {
-    width: 14px;
-    margin-left: 0.5rem;
-    vertical-align: middle;
+.experience {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
 }
 
-/* ================= SECTION 4 ================= */
-
-.Section-4 {
-    padding: 6rem;
+.experience-item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 24px;
 }
 
-/* ================= FOOTER ================= */
+.experience-left {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.experience-company {
+  color: #D3E97A;
+  font-size: 14px;
+}
+
+.experience-date {
+  font-size: 13px;
+  color: #C7C7C7;
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-info a {
+  color: #D3E97A;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+input,
+textarea {
+  background-color: #1A1A1A;
+  border: none;
+  border-radius: 12px;
+  padding: 14px 16px;
+  color: #FFFFFF;
+  font-family: 'Manrope', sans-serif;
+  font-size: 14px;
+}
+
 
 footer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    padding: 6rem;
-    border-top: 1px solid #1a1a1a;
+  padding: 32px 24px;
+  font-size: 13px;
+  color: #C7C7C7;
 }
 
-footer h1 {
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 4rem;
-    letter-spacing: 1px;
-    margin-bottom: 1rem;
+
+
+.about-page {
+  padding-top: 120px;
 }
 
-footer p {
-    color: #bdbdbd;
+/* Top section */
+.about-hero {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 96px;
+  align-items: start;
 }
 
-footer .form-label {
-    font-size: 0.7rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: #bdbdbd;
+.about-hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
 
-footer .form-control,
-footer textarea {
-    background: transparent;
-    border: 1px solid #1a1a1a;
-    color: #ffffff;
+.about-hero-text h1 {
+  max-width: 420px;
 }
 
-footer button {
-    margin-top: 1rem;
-    padding: 0.8rem 2rem;
-    border-radius: 30px;
-    border: none;
-    background: #D3E97A;
-    color: #000000;
-    font-weight: 600;
-    cursor: pointer;
+.about-hero-text p {
+  max-width: 520px;
 }
 
-/* ================= MOBILE RESPONSIVE STYLES ================= */
 
-/* Tablet and smaller screens */
-@media (max-width: 1024px) {
-    .navbar {
-        padding: 1.5rem 3rem;
-    }
-    
-    .Section-1,
-    .Section-2,
-    .Section-3,
-    .Section-4,
-    footer {
-        padding: 4rem 3rem;
-    }
-    
-    .Section-1 h1 {
-        font-size: 3.5rem;
-    }
-    
-    .Section-2 h3,
-    .Section-3 h3 {
-        font-size: 2rem;
-    }
+.about-hero-image {
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
 }
 
-/* Tablet screens */
-@media (max-width: 768px) {
-    .Section-1 {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-        min-height: auto;
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-    }
-    
-    .Section-1 > div:last-child {
-        order: -1;
-        max-width: 400px;
-        margin: 0 auto;
-    }
-    
-    .Section-1 h1 {
-        font-size: 3rem;
-        text-align: center;
-    }
-    
-    .Section-1 p {
-        max-width: 100%;
-        text-align: center;
-    }
-    
-    .btn-div {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    
-    .Section-2,
-    .Section-3 {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-    }
-    
-    .Section-2 img,
-    .Section-3 img {
-        max-width: 500px;
-        margin: 0 auto;
-    }
-    
-    .Section-2 h3,
-    .Section-3 h3 {
-        text-align: center;
-    }
-    
-    .Section-2 p,
-    .Section-3 p {
-        max-width: 100%;
-        text-align: center;
-    }
-    
-    footer {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-    }
-    
-    footer h1 {
-        font-size: 3rem;
-        text-align: center;
-    }
-    
-    footer > div:first-child p {
-        text-align: center;
-    }
+.about-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-/* Mobile screens */
-@media (max-width: 576px) {
-    .navbar {
-        padding: 1rem 1.5rem;
-    }
-    
-    .navbar-brand {
-        font-size: 1.3rem;
-    }
-    
-    .Section-1,
-    .Section-2,
-    .Section-3,
-    .Section-4,
-    footer {
-        padding: 2rem 1.5rem;
-    }
-    
-    .Section-1 h1 {
-        font-size: 2.5rem;
-    }
-    
-    .Section-1 > div:last-child {
-        padding: 1rem;
-        border-radius: 20px;
-    }
-    
-    .Section-1 img {
-        padding: 1.5rem;
-        border-radius: 16px;
-    }
-    
-    .Section-2 h3,
-    .Section-3 h3 {
-        font-size: 1.8rem;
-    }
-    
-    .Section-2 img,
-    .Section-3 img {
-        padding: 1.5rem;
-        border-radius: 12px;
-    }
-    
-    footer h1 {
-        font-size: 2.5rem;
-    }
-    
-    footer button {
-        width: 100%;
-    }
-    
-    /* Adjust project info for mobile */
-    .Section-2 > div:nth-child(2) > div,
-    .Section-3 > div:nth-child(2) > div {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.3rem;
-        padding: 0.7rem 0;
-    }
-    
-    .Section-2 h4,
-    .Section-3 h4 {
-        text-align: center;
-        margin-top: 1.5rem;
-    }
-    
-    /* Fix form inputs on mobile */
-    .form-control {
-        font-size: 16px; /* Prevents zoom on iOS */
-    }
-    
-    .form-label {
-        margin-bottom: 0.5rem;
-    }
-    
-    /* Stack buttons vertically on very small screens */
-    @media (max-width: 400px) {
-        .btn-div {
-            flex-direction: column;
-            align-items: stretch;
-        }
-        
-        #button-1,
-        #button-2,
-        #button-3 {
-            width: 100%;
-            justify-content: center;
-        }
-        
-        #button-1 {
-            margin-bottom: 0.5rem;
-        }
-    }
+
+
+.about-capabilities {
+  margin-top: 120px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 96px;
 }
 
-/* Small mobile screens */
-@media (max-width: 375px) {
-    .Section-1 h1 {
-        font-size: 2.2rem;
-    }
-    
-    .Section-2 h3,
-    .Section-3 h3 {
-        font-size: 1.6rem;
-    }
-    
-    footer h1 {
-        font-size: 2rem;
-    }
-    
-    #button-1 {
-        padding: 0 1.5rem;
-        font-size: 0.9rem;
-    }
+.about-capabilities-text {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
-/* Fix for the broken HTML tag */
-.navbar-collapse {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.capabilities {
+  margin-top: 16px;
 }
 
-/* Ensure images don't overflow */
-.Section-1 > div:last-child,
-.Section-2 > div:first-child,
-.Section-3 > div:first-child {
-    overflow: hidden;
+
+
+.about-experience {
+  margin-top: 120px;
 }
 
-/* Make sure text is readable on mobile */
-p, h5, .form-label {
-    line-height: 1.6;
+.experience {
+  margin-top: 48px;
 }
 
-/* Improve touch targets for mobile */
-button, 
-.nav-link,
-.Section-2 h4,
-.Section-3 h4 {
-    min-height: 44px; /* Minimum touch target size */
-    display: inline-flex;
-    align-items: center;
+.experience-item {
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
-/* Fix for form spacing */
-.mb-3 {
-    margin-bottom: 1rem !important;
+.experience-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
 }
 
-/* Fix for Section-4 spacing */
-.Section-4 {
-    text-align: center;
-    padding: 4rem 1.5rem;
+.experience-left h3 {
+  margin-bottom: 6px;
 }
 
-.Section-4 h2 {
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: #ffffff;
+.experience-left p {
+  font-size: 14px;
 }
 
-.Section-4 p {
-    color: #bdbdbd;
-    max-width: 600px;
-    margin: 0 auto;
-    line-height: 1.6;
-}
+
+
