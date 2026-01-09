@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap');
+
+/* =========================
+   ABOUT PAGE STYLES
+   ========================= */
+
+body {
+    background-color: #0A0A0A;
+}
+
+nav {
+    margin: 1rem 2rem;
+}
+
+.nav-logo {
+    font-size: 32px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    color: white;
+}
+
+.nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+}
+
+.nav-inner a {
+    padding-left: 1rem;
+    font-size: 16px;
+}
+
+.nav-links {
+
+    font-family: "Inter", sans-serif;
+}
+
+/* SECTION 6 – ABOUT HERO */
+.Section-6 {
+    display: flex;
+    justify-content: center;
+    gap: 45rem;
+margin: 3rem 0 5rem;
+}
+
+.Section-6 h1 {
+    font-size: 101px;
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+}
+.Section-6 p{
+    color: #C7C7C7;
+    font-family: "Manrope", sans-serif;
+    font-size: 18px;
+}
+
+.Section-6 #div-1 {
+font-size: 16px;
+font-weight: 700;
+    font-family: "Manrope", sans-serif;
+}
+
+.Section-6 #div-2 {
+        width: 704px;
+}
+
+.Section-6 h3 {
+    color: white;
+    font-family: "Manrope", sans-serif;
+    font-size: 32px;
+}
+.btn-div{
+    display: flex;
+}
+.Section-6 button {
+background-color: #222222;
+color: black;
+height: 54px;
+border: none;
+cursor: pointer;
+border-radius: 1.5rem;
+width: 54px;
+
+}
+#btn-1 {
+    width: 244px;
+    background-color: #D3E97A;
+    display: flex;
+align-items: center;
+justify-content: center;
+}
+/* Semi Section - IMG */
+
+.Semi-Section {
+    display: flex;
+    justify-content: center;
+}
+.Semi-Section img{
+    width: 1224px;
+    height: 700px;
+}
+
+/* Section 7 */
+
+.Section-7 {
+    display: flex;
+    justify-content: space-between;
+    margin: 6rem 14rem;
+}
+
+.Section-7 h2 {
+    font-size: 76px;
+    font-family: "Bebas Neue", sans-serif;
+    color: white;
+}
+
+.Section-7 p {
+   width: 600px;
+    font-size: 18px;
+    margin-bottom: 2rem;
+}
+.Section-7 #div-2 {
+    width: 600px;
+}
+.Section-7 button {
+width: 124px;
+height: 56px;
+border: 1px solid #484848;
+background-color: #0A0A0A;
+color: white;
+border-radius: 1.5rem;
+margin: 0.5rem;
+}
+
+#h{
+width: ;
+}
+
+#c{
+width: ;
+}
+
+#j1{
+width: ;
+}
+
+#j2{
+width: ;
+}
+
+#a{
+width: ;
+}
+
+#f{
+width: ;
+}
+
+#t{
+width: ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   SECTION 8 – EXPERIENCE
+   ========================= */
+
+.Section-8 {
+    display: flex;
+    justify-content: space-between;
+    margin: 6rem 14rem;
+}
+
+.Section-8 h2 {
+    font-size: 76px;
+    font-family: "Bebas Neue", sans-serif;
+    color: white;
+}
+
+.Section-8 h5 {
+    font-size: 20px;
+    color: white;
+}
+
+.Section-8 span {
+    color: #C7C7C7;
+    font-size: 14px;
+    margin-left: 1rem;
+}
+
+.Section-8 p {
+    font-size: 16px;
+    max-width: 560px;
+    margin-top: 0.8rem;
+}
+
+.Section-8 div>div {
+    margin-bottom: 3rem;
+}
+
+/* Highlight company name */
+.Section-8 div>div p:nth-of-type(1):not(:first-child) {
+    color: #D3E97A;
+}
